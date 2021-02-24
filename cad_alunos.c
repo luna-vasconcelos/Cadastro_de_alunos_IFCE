@@ -6,8 +6,8 @@
 struct Aluno
 {
     char nome[80];
-    float nota[3][3];
-    int media[3][3];
+    float nota[3];
+    float media[3][3];
 };
 
 struct Aluno leAluno()
@@ -26,7 +26,7 @@ struct Aluno leAluno()
     scanf("%f", &aluno.nota[2]);
     getchar();
 
-    aluno.media[0][0] = aluno.nota[0] + aluno.nota[1] + aluno.nota[2];    
+    aluno.media[0][0] = aluno.nota[0] + aluno.nota[1] + aluno.nota[2];
     
     printf ("media %d\n", aluno.media[0][0] );
     

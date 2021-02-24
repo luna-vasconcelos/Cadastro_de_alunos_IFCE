@@ -1,0 +1,14 @@
+Dados de um aluno --- Nome: Luna
+. Nota: 3.00
+Dados de um aluno --- Nome: Igor
+. Nota: 6.00
+Dados de um aluno --- Nome: Sara
+. Nota: 8.00
+Dados de um aluno --- Nome: Luna
+. Nota: 0.00
+Dados de um aluno --- Nome: Julia
+. Nota: 0.00
+Dados de um aluno --- Nome: Luna
+. Nota: 0.00
+Dados de um aluno --- Nome: k
+. Nota: 0.00
