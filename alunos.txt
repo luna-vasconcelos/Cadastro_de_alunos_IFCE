@@ -12,3 +12,9 @@ Dados de um aluno --- Nome: Luna
 . Nota: 0.00
 Dados de um aluno --- Nome: k
 . Nota: 0.00
+Dados de um aluno --- Nome: ¤þa. Nota: 0.00
+Dados de um aluno --- Nome: ¤þa. Nota: 0.00
+Dados de um aluno --- Nome: ¤þa. Nota: 0.00
+Dados de um aluno --- Nome: ¤þa. Nota: 0.00
+Dados de um aluno --- Nome: ¤þa. Nota: 0.00
+Dados de um aluno --- Nome: ¤þa. Nota: 0.00

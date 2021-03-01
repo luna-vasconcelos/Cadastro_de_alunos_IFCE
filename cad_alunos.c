@@ -1,50 +1,58 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#define MAX 200 //constante definindo o máximo de alunos e alinhando os dados
 
 //declaração da estrutura com as variáveis
 struct Aluno
 {
-    char nome[80];
-    float nota[3];
-    float media[3][3];
+    char nome[MAX][50];
+    float nota[MAX][3];
+    int media[MAX][3];
 };
 
+//declaração da estrutura para coleta de dados do usuário
 struct Aluno leAluno()
 {
     struct Aluno aluno;
-
-    printf("Digite o Nome: ");
-    fgets(aluno.nome, 80, stdin);
-    printf("Digite a 1º Nota: \n");
-    scanf("%f", &aluno.nota[0]);
+    printf("Digite o Nome: \n");
+    fgets(aluno.nome, 40, stdin);
+    printf("Digite a 1º Nota da matéria 1: \n");
+    scanf("%f", &aluno.nota[0][0]);
     getchar();
-    printf("Digite a 2º Nota: \n");
-    scanf("%f", &aluno.nota[1]);
+    printf("Digite a 2º Nota da matéria 1: \n");
+    scanf("%f", &aluno.nota[0][1]);
     getchar(); 
-    printf("Digite a 3º Nota: \n");
-    scanf("%f", &aluno.nota[2]);
+    printf("Digite a 3º Nota da matéria 1: \n");
+    scanf("%f", &aluno.nota[0][2]);
     getchar();
+};
 
-    aluno.media[0][0] = aluno.nota[0] + aluno.nota[1] + aluno.nota[2];
-    
-    printf ("media %d\n", aluno.media[0][0] );
-    
-
-    return aluno;
+    /*
+for (int i=0; i < aluno.quant; i++)
+{
+    for (int j=0; j < aluno.quant; j++)
+    {
+        aluno.media[i][j] = aluno.nota[0][0] + aluno.nota[0][1] + aluno.nota[0][2];
+    }
 }
-
+    
+printf ("media 1º aluno = %d\n", aluno.media[0][0] );
+    
+return aluno;
+}
+*/
 //cria arquivo de texto com as informações dos alunos
 void imprimeAluno(struct Aluno a)
 {
     printf("Dados de um aluno --- ");
-    printf("Nome: %s. Nota: %.2f\n", a.nome,a.nota);
+    printf("Nome: %s. Nota: %.2f\n", a.nome);
 
     FILE *file;
-    file = fopen("alunos.txt", "a");
+    file = fopen("alunos.txt", "cad_aluno");
 
     fprintf(file, "Dados de um aluno --- ");
-    fprintf(file, "Nome: %s. Nota: %.2f\n", a.nome, a.nota);
+    fprintf(file, "Nome: %s. Nota: %.2f\n", a.nome);
 
     fclose(file);
 
@@ -59,7 +67,6 @@ void listarTurma(struct Aluno turma[], int n)
         imprimeAluno(turma[i]);
 
 }
-
 int main(int argc, char  *argv[])
 {
     struct Aluno *vetAlu;
